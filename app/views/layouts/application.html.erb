@@ -15,6 +15,12 @@
           <%= navbar_list_item 'Home', root_path %>
           <%= navbar_list_item 'About', page_path('about') %>
         </ul>
+        <ul class="nav pull-right">
+          <%= navbar_list_item 'Sign in', new_user_session_path, hide: user_signed_in? %>
+          <%= navbar_list_item 'Sign up', new_user_registration_path, hide: user_signed_in? %>
+          <%= navbar_list_item 'Profile', edit_user_registration_path, hide: !user_signed_in? %>
+          <%= navbar_list_item 'Sign out', destroy_user_session_path, hide: !user_signed_in?, method: :delete %>
+        </ul>
       </div>
     </div>
   </div>
