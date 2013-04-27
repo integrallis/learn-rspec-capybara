@@ -10,17 +10,24 @@
   <div class="container">
     <div class="navbar">
       <div class="navbar-inner">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <%= link_to 'Learn RSpec & Capybara', root_path, class: 'brand' %>
-        <ul class="nav">
-          <%= navbar_list_item 'Home', root_path %>
-          <%= navbar_list_item 'About', page_path('about') %>
-        </ul>
-        <ul class="nav pull-right">
-          <%= navbar_list_item 'Sign in', new_user_session_path, hide: user_signed_in? %>
-          <%= navbar_list_item 'Sign up', new_user_registration_path, hide: user_signed_in? %>
-          <%= navbar_list_item 'Profile', edit_user_registration_path, hide: !user_signed_in? %>
-          <%= navbar_list_item 'Sign out', destroy_user_session_path, hide: !user_signed_in?, method: :delete %>
-        </ul>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <%= navbar_list_item 'Home', root_path %>
+            <%= navbar_list_item 'About', page_path('about') %>
+          </ul>
+          <ul class="nav pull-right">
+            <%= navbar_list_item 'Sign in', new_user_session_path, hide: user_signed_in? %>
+            <%= navbar_list_item 'Sign up', new_user_registration_path, hide: user_signed_in? %>
+            <%= navbar_list_item 'Profile', edit_user_registration_path, hide: !user_signed_in? %>
+            <%= navbar_list_item 'Sign out', destroy_user_session_path, hide: !user_signed_in?, method: :delete %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
