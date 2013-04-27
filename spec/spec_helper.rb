@@ -5,6 +5,9 @@ require 'rspec/autorun'
 
 require 'capybara/rspec'
 
+# Uncomment the line below to run all specs in a browser for fun :)
+# Capybara.default_driver = :selenium
+
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
