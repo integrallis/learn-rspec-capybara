@@ -16,3 +16,7 @@ $ rake db:migrate db:test:prepare
 ```console
 $ bundle exec rspec spec
 ```
+
+### Branches
+
+The `master` branch contains a set of `feature` specs which need to be implemented. The `tests` branch has complete implementations of these tests
